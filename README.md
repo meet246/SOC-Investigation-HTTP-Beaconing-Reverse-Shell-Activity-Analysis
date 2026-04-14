@@ -1,3 +1,0 @@
-This project documents a network forensic investigation performed on a packet capture (PCAP) file containing suspicious HTTP traffic originating from an internal host.
-
-The analysis identified abnormal HTTP request behavior consistent with automated beaconing activity, followed by evidence of remote command execution, reverse shell establishment, persistence mechanisms, and potential privilege escalation attempts. The objective of this investigation was to reconstruct attacker activity, identify indicators of compromise (IOCs), and determine detection and mitigation strategies applicable to enterprise SOC environments.
