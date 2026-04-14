@@ -24,14 +24,14 @@ Initial inspection of the PCAP revealed abnormal network activity from the inter
 
 Further analysis of TCP streams revealed embedded command execution activity within the HTTP sessions.
 
-![http get requests](.\images\httpget.png)
+![http get requests](./images/httpget.png)
 
 ---
 
 ## Attack Analysis & Reconstruction
 
 ### 1. Suspicious Command Execution
-![tcp stream](.\images\tcp.png)
+![tcp stream](./images/tcp.png)
 
 TCP stream inspection revealed the execution of a Linux-based reverse shell and persistence mechanism:
 
@@ -52,7 +52,7 @@ Persistence was achieved by modifying the **/root/.bashrc** file. This ensures t
 ### 4. Data Obfuscation
 The presence of a reversed encoded string suggests an attempt to obfuscate the payload or hide embedded data from simple string-based detection signatures:
 
-![obfuscation](.\images\rev.png)
+![obfuscation](./images/rev.png)
 
 ### 5. Privilege Escalation Attempt
 The command **chmod +s /bin/bash** indicates a critical security impact. By setting the **SUID bit** on the bash binary, the attacker attempted to create a backdoor that allows any user to execute the shell with **root-level privileges**.
