@@ -1,5 +1,15 @@
-This project documents a network forensic investigation performed on a packet capture (PCAP) file containing suspicious HTTP traffic originating from an internal host.
+# SOC Investigation: HTTP Beaconing & Reverse Shell Activity Analysis (PCAP)
 
-The analysis identified abnormal HTTP request behavior consistent with automated beaconing activity, followed by evidence of remote command execution, reverse shell establishment, persistence mechanisms, and potential privilege escalation attempts. The objective of this investigation was to reconstruct attacker activity, identify indicators of compromise (IOCs), and determine detection and mitigation strategies applicable to enterprise SOC environments.
+Scenario: Analyzed a PCAP of an internal host communicating with a malicious C2 server.
+
+Findings: Identified a reverse shell and persistence via crontab.
+
+Outcome: Compiled a list of IOCs and recommended firewall rules for mitigation.
+
+Tools Used: Wireshark, TShark, Brim/Zui.
+
+Concepts: Traffic Analysis, MITRE ATT&CK Mapping, Network Forensics.
+
+
 
 [View the Full Technical Analysis Report Here](./SOC%20Investigation%20PCAP.md)
